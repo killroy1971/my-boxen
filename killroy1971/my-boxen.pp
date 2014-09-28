@@ -11,4 +11,9 @@ class people::killroy1971::my-boxen {
      ensure => link,
      target  => "${the_boxendir}/killroy1971",
   }
+
+  file { "${::boxen_srcdir}/manifests":
+     ensure => link,
+     target  => "${the_boxendir}",
+  }
 }
